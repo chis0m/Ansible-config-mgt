@@ -13,8 +13,7 @@
 
     - name: show debug result
       debug:
-        msg: "{{ result }}"
-      when: result.stdout.find('172.31.19.98') != -1      
+        msg: "{{ result }}"  
 
 - name: update LB server
   hosts: lb
