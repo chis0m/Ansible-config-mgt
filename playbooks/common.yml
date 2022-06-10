@@ -11,8 +11,10 @@
         state: latest
       register: result
 
-    - debug:
-        var: result     
+    - name: show debug result
+      debug:
+        msg: "{{ result }}"
+      when: result.stdout.find('172.31.19.98') != -1      
 
 - name: update LB server
   hosts: lb
