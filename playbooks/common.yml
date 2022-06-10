@@ -11,12 +11,6 @@
         state: latest
       register: result
 
-    - mail:
-        to: ejimchisom@gmail.com
-        subject: Service Alert
-        body: Failed Ansible Process
-        when: result.stdout.find('172.31.19.98') != -1
-
     - debug:
         var: result     
 
