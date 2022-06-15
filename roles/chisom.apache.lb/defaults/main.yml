@@ -1,0 +1,4 @@
+---
+# defaults file for chisom.apache.lb
+enable_apache_lb: false
+load_balancer_is_required: false
