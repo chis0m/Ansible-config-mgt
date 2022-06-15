@@ -3,7 +3,7 @@
   hosts: all
   tasks:
     - import_playbook: ../static-assignments/common.yml 
-      include: ../dynamic-assignments/env-vars.yml
+    - include: ../dynamic-assignments/env-vars.yml
       tags:
         - always
 
@@ -17,5 +17,4 @@
   hosts: lb
   tasks:
     - import_playbook: ../static-assignments/loadbalancers.yml
-      include: ../dynamic-assignments/env-vars.yml
       when: load_balancer_is_required
